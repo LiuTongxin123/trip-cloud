@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  cn.tripcode.trip.redis.config.Wolf2wRedisAutoConfiguration

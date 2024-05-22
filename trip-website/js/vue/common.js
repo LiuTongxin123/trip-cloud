@@ -17,12 +17,12 @@ var serverUrlMap = {
     data : "http://localhost:8083",
     comment : "http://localhost:8084",
     search : "http://localhost:8085",
-    gateway : "http://localhost:9000"
+    gateway : "http://localhost:9999"
 
 }
 function getServiceUrl(service){
     //return serverUrlMap[service]
-    return "http://localhost:9000/" + service;
+    return serverUrlMap["gateway"]+"/" + service;
 }
 
 //异步请求

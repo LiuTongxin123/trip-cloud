@@ -6,6 +6,7 @@
     <file url="file://$PROJECT_DIR$/trip-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/trip-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/trip-common/trip-common-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/trip-common/trip-common-redis/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/trip-gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/trip-mgrsite/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/trip-modules-api/src/main/java" charset="UTF-8" />

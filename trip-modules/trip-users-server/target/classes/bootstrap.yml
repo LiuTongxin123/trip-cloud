@@ -7,5 +7,8 @@ spring:
       config:
         namespace: 4415a716-92be-42ff-983b-0c88daaebe48
         file-extension: yaml
+        shared-configs:
+          - dataId: redis-dev.yaml
+            refresh: true
   profiles:
     active: dev

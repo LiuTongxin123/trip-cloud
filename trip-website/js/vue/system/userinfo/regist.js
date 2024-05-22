@@ -16,7 +16,7 @@ var vue = new Vue({
             //   /^1[3456789]\d{9}$/
 
             if (/^1\d{10}$/g.test(val)) {
-                $.get(getServiceUrl("member") + "/userInfos/checkPhone", {phone:val}, function (data) {
+                $.get(getServiceUrl("u") + "/user/phone/exists", {phone:val}, function (data) {
                    if(data.code == 200){
                        if(!data.data){
                            $('#inputPhone').next().text('').hide()
