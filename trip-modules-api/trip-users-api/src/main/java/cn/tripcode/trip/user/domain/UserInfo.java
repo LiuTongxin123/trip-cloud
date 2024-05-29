@@ -3,6 +3,7 @@ package cn.tripcode.trip.user.domain;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -24,7 +25,7 @@ public class UserInfo implements Serializable {
     private String nickname;  //昵称
     private String phone;  //手机
     private String email;  //邮箱
-
+    @JsonIgnore
     private String password; //密码
     private Integer gender = GENDER_SECRET; //性别
     private Integer level = 0;  //用户级别

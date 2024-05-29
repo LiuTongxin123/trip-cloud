@@ -17,7 +17,6 @@ public class SmsController {
 
     @PostMapping("register")
     public R<?> registerVerifyCode(String phone) {
-        // TODO 手机号格式校验
         smsService.registerSmsSend(phone);
         return R.ok();
     }

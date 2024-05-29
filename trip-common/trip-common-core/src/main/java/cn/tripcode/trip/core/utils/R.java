@@ -17,8 +17,11 @@ public class R<T> {
     public static final int CODE_NOLOGIN = 401;
     public static final String MSG_NOLOGIN = "请先登录";
     public static final int CODE_ERROR = 500;
+    public static final int CODE_REGISTER_ERROR = 500100;
+    public static final int CODE_SMS_ERROR = 500101;
     public static final String MSG_ERROR = "系统异常，请联系管理员";
     public static final int CODE_ERROR_PARAM = 501;
+    public static final int CODE_LOGIN_ERROR = 500401;
 
     /**
      * 区分不同结果, 而不再是true或者false

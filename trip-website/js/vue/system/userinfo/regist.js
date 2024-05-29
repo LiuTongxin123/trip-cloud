@@ -53,7 +53,7 @@ var vue = new Vue({
                 }, 1000);
 
                 var phone = $("#phone").val();
-                $.get(getServiceUrl("member") + "/userInfos/sendVerifyCode", {phone:phone}, function (data) {
+                $.post(getServiceUrl("u") + "/sms/register", {phone:phone}, function (data) {
                     if(data.code == 200){
                         popup("发送成功")
                     }else{
@@ -64,7 +64,7 @@ var vue = new Vue({
         },
         //注册-完成注册
         regist:function (){
-            $.post(getServiceUrl("member") + "/userInfos/regist", $("#editForm").serialize(), function (data) {
+            $.post(getServiceUrl("u") + "/user/register", $("#editForm").serialize(), function (data) {
                 if(data.code == 200){
                     location.href = "/login.html";
                 }else{
