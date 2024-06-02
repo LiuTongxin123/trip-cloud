@@ -1,9 +1,9 @@
 package cn.tripcode.trip.user.service.impl;
 
+import cn.tripcode.trip.auth.config.JwtProperties;
 import cn.tripcode.trip.core.exception.BusinessException;
 import cn.tripcode.trip.core.utils.R;
 import cn.tripcode.trip.redis.utils.RedisCache;
-import cn.tripcode.trip.user.config.JwtProperties;
 import cn.tripcode.trip.user.mapper.UserInfoMapper;
 import cn.tripcode.trip.user.redis.key.UserRedisKeyPrefix;
 import cn.tripcode.trip.user.service.UserInfoService;

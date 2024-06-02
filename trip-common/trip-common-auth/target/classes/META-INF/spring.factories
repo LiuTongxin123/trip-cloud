@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  cn.tripcode.trip.auth.config.Wolf2wJwtAutoConfiguration

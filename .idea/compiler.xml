@@ -10,7 +10,10 @@
         <module name="trip-common-redis" />
         <module name="trip-gateway" />
         <module name="trip-common-core" />
+        <module name="trip-common-auth" />
+        <module name="trip-article-server" />
         <module name="trip-users-server" />
+        <module name="trip-article-api" />
         <module name="trip-users-api" />
       </profile>
     </annotationProcessing>
@@ -21,7 +24,10 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="trip-article-api" options="-parameters" />
+      <module name="trip-article-server" options="-parameters" />
       <module name="trip-common" options="" />
+      <module name="trip-common-auth" options="-parameters" />
       <module name="trip-common-core" options="-parameters" />
       <module name="trip-common-redis" options="-parameters" />
       <module name="trip-gateway" options="-parameters" />

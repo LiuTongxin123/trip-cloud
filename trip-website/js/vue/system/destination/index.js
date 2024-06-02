@@ -10,7 +10,7 @@ var vue = new Vue({
         //热门区域
         hotRegion:function (){
            //查询热门区域：List<Region>
-            ajaxGet("article", "/regions/hot", {}, function (data) {
+            ajaxGet("article", "/regions/hotList", {}, function (data) {
                 vue.regions = data.data
             })
 
@@ -29,7 +29,7 @@ var vue = new Vue({
         },
         queryRegion:function (rid) {
             //list<Destination>
-            ajaxGet("article","/regions/destination/",{rid:rid}, function (data) {
+            ajaxGet("article","/destinations/hotList",{rid:rid}, function (data) {
                 var list = data.data;
                 vue.regionId=rid;
                 var destListLeft = [];  //左边

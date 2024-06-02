@@ -1,6 +1,7 @@
 package cn.tripcode.trip.redis.utils;
 
 import cn.tripcode.trip.redis.key.KeyPrefix;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.core.BoundSetOperations;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -16,7 +17,7 @@ import java.util.concurrent.TimeUnit;
  * @author ruoyi
  **/
 @SuppressWarnings(value = {"unchecked", "rawtypes"})
-@Component
+
 public class RedisCache {
     public final RedisTemplate redisTemplate;
 

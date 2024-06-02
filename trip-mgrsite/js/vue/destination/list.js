@@ -11,7 +11,7 @@ var vue = new Vue({
         //初始化列表
         init:function (){
             var options = {
-                url: getServiceUrl("article") + "/destinations/query",
+                url: getServiceUrl("article") + "/destinations",
                 contentType: "application/x-www-form-urlencoded",   //重要选项,必填
                 uniqueId: "id",                     //每一行的唯一标识，一般为主键列
                 striped : true, //是否显示行间隔色
@@ -35,10 +35,10 @@ var vue = new Vue({
                 queryParams:function (data){
                     var params = {};
                     if(data.limit){
-                        params.pageSize = data.limit;
+                        params.size = data.limit;
                     }
                     if(data.limit){
-                        params.currentPage = data.offset / data.limit + 1;
+                        params.current = data.offset / data.limit + 1;
                     }
                     params.keyword = $("#keyword").val();
 

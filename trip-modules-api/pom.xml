@@ -15,7 +15,15 @@
     <description>所有微服务子模块的api 父模块，用于管理所有服务的api</description>
     <modules>
         <module>trip-users-api</module>
+        <module>trip-article-api</module>
     </modules>
+    <dependencies>
+        <dependency>
+            <groupId>cn.tripcode.trip</groupId>
+            <artifactId>trip-common-core</artifactId>
+        </dependency>
+    </dependencies>
+
 
 
 </project>

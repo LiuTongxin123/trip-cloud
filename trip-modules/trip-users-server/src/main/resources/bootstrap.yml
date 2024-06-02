@@ -9,7 +9,8 @@ spring:
         file-extension: yaml
         shared-configs:
           - dataId: redis-dev.yaml
-            refresh: true
+
+          - dataId: jwt-dev.yaml
   profiles:
     active: dev
 
