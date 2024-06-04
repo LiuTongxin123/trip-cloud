@@ -15,7 +15,7 @@ var vue = new Vue({
         doPage:function(page){
             var param = getParams();
             var themeId = $("._j_tag.on").data("tid");
-            ajaxGet("article","/strategies/query",{themeId:themeId, destId:param.destId, currentPage:page}, function (data) {
+            ajaxGet("article","/strategies/query",{themeId:themeId, destId:param.destId, current:page}, function (data) {
                 vue.page = data.data;
                 buildPage(vue.page.current, vue.page.pages,vue.doPage);
             })
@@ -27,7 +27,7 @@ var vue = new Vue({
             })
         },
         queryTheme:function (){
-            ajaxGet("article","/strategyThemes/list", {}, function (data) {
+            ajaxGet("article","/strategies/themes/list", {}, function (data) {
                 vue.themes = data.data;
             })
 

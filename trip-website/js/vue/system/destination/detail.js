@@ -22,13 +22,13 @@ var vue = new Vue({
         //查询攻略分类
         queryCatalog:function (){
             //ajaxGet("article","/strategyCatalogs/list", {destId:this.param.id}, function (data) {
-            ajaxGet("article","/destinations/catalogs", {destId:this.param.id}, function (data) {
+            ajaxGet("article","/strategies/groups", {destId:this.param.id}, function (data) {
                 vue.catalogs = data.data;
             })
         },
         //查询点击量前三
         queryViewnnumTop3:function (){
-            ajaxGet("article","/destinations/strategies/viewnnumTop3", {destId:this.param.id}, function (data) {
+            ajaxGet("article","/strategies/viewnumTop3", {destId:this.param.id}, function (data) {
                 vue.strategies = data.data;
             })
 

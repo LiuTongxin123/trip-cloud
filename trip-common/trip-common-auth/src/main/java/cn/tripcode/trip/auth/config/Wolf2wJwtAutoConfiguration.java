@@ -1,6 +1,7 @@
 package cn.tripcode.trip.auth.config;
 
 import cn.tripcode.trip.auth.interceptor.LoginInterceptor;
+import cn.tripcode.trip.auth.utils.SpringContextUtil;
 import cn.tripcode.trip.redis.utils.RedisCache;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -21,5 +22,9 @@ public class Wolf2wJwtAutoConfiguration {
     @Bean
     public WebConfig webConfig(RedisCache redisCache,JwtProperties jwtProperties){
         return new WebConfig(loginInterceptor(redisCache,jwtProperties));
+    }
+    @Bean
+    public SpringContextUtil springContextUtil() {
+        return new SpringContextUtil();
     }
 }

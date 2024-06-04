@@ -35,17 +35,14 @@ var vue = new Vue({
         },
 
         //条件列表
-        queryCondition:function (type){
-            ajaxGet("article","/strategyConditions/condition", {type:type}, function (data) {
-                if(type == 1){
-                    vue.chinaCondition = data.data;
-                }else if(type == 2){
-                    vue.abroadCondition = data.data;
-                }else {
-                    vue.themeCondition = data.data;
+        queryCondition:function (){
+            ajaxGet("article","/strategies/conditions",{}, function (res) {
+                    let map=res.data;
+                    vue.chinaCondition = map.chinaCondition;
+                    vue.abroadCondition =map.abroadCondition;
+                    vue.themeCondition = map.themeCondition;
                 }
-            })
-
+            )
         },
 
         //攻略查询
@@ -73,7 +70,7 @@ var vue = new Vue({
         },
         //分页
         doPage:function (page) {
-            $("#searchForm input[name='currentPage']").val(page);
+            $("#searchForm input[name='current']").val(page);
             ajaxGet("article","/strategies/query",$("#searchForm").serialize(), function (data) {
                 vue.page = data.data;
                 buildPage(vue.page.current, vue.page.pages,vue.doPage);
@@ -100,11 +97,7 @@ var vue = new Vue({
         this.queryThemeCds();
 
         //攻略条件--主题攻略  List<StrategyCondition> list
-        this.queryCondition(3);
-        //攻略条件--国内攻略  List<StrategyCondition> list
-        this.queryCondition(2);
-        //攻略条件--国外攻略  List<StrategyCondition> list
-        this.queryCondition(1);
+        this.queryCondition();
 
         ajaxGet("article","/banners/strategy",{}, function (data) {
             vue.banners = data.data;

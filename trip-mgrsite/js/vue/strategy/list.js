@@ -37,10 +37,10 @@ var vue = new Vue({
                 queryParams:function (data){
                     var params = {};
                     if(data.limit){
-                        params.pageSize = data.limit;
+                        params.size = data.limit;
                     }
                     if(data.limit){
-                        params.currentPage = data.offset / data.limit + 1;
+                        params.current = data.offset / data.limit + 1;
                     }
                     params.keyword = $("#keyword").val();
 

@@ -23,7 +23,7 @@ var vue = new Vue({
             });
 
             var ck = CKEDITOR.replace( 'strategyContent',{
-                filebrowserUploadUrl: getServiceUrl("article") + '/strategies/uploadImg'
+                filebrowserUploadUrl: getServiceUrl("article")+ '/strategies/uploadImg'
             });
             this.ck = ck;
 
@@ -32,13 +32,13 @@ var vue = new Vue({
         },
         //查询主题
         queryTheme:function (){
-            ajaxGet("article", "/strategyThemes/list", {}, function (data){
+            ajaxGet("article", "/strategies/themes/list", {}, function (data){
                 vue.themes = data.data;
             });
         },
         //攻略分类分组下拉框--List<CatalogVO>
         queryCatalogGroup:function (){
-            ajaxGet("article", "/strategyCatalogs/groups", {}, function (data){
+            ajaxGet("article", "/strategies/catalogs/groups", {}, function (data){
                 vue.catalogVOs = data.data;
             })
         },

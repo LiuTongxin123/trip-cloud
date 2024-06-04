@@ -28,20 +28,20 @@ var vue = new Vue({
             this.imgFile = imgFile;
 
             var ck = CKEDITOR.replace( 'strategyContent',{
-                filebrowserUploadUrl: '/strategies/uploadImg'
+                filebrowserUploadUrl: getServiceUrl("article")+'/strategies/uploadImg'
             });
             this.ck = ck;
 
         },
         //查询主题
         queryTheme:function (){
-            ajaxGet("article", "/strategyThemes/list", {}, function (data){
+            ajaxGet("article", "/strategies/themes/list", {}, function (data){
                 vue.themes = data.data;
             });
         },
         //攻略分类分组下拉框
         queryCatalogGroup:function (){
-            ajaxGet("article", "/strategyCatalogs/groups", {}, function (data){
+            ajaxGet("article", "/strategies/catalogs/groups", {}, function (data){
                 vue.catalogVOs = data.data;
                 //vue.getDetail(getParams().id)
             })
@@ -69,6 +69,7 @@ var vue = new Vue({
                 ajaxGet("article", "/strategies/detail", {id:id}, function (data){
                     vue.strategy = data.data;
                     vue.content = data.data.content;
+                    vue.ck.setData(data.data.content.content);
                     vue.imgFile.setImage(data.data.coverUrl)
                 })
                 clearInterval(timer)

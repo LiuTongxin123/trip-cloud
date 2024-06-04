@@ -21,7 +21,7 @@ var vue = new Vue({
         //初始化列表
         init:function (){
             var options = {
-                url: getServiceUrl("article") + "/strategyCatalogs/query",
+                url: getServiceUrl("article") + "/strategies/catalogs/query",
                 contentType: "application/x-www-form-urlencoded",   //重要选项,必填
                 uniqueId: "id",                     //每一行的唯一标识，一般为主键列
                 striped : true, //是否显示行间隔色
@@ -45,10 +45,10 @@ var vue = new Vue({
                 queryParams:function (data){
                     var params = {};
                     if(data.limit){
-                        params.pageSize = data.limit;
+                        params.size = data.limit;
                     }
                     if(data.limit){
-                        params.currentPage = data.offset / data.limit + 1;
+                        params.current = data.offset / data.limit + 1;
                     }
                     params.keyword = $("#keyword").val();
 
@@ -128,17 +128,17 @@ var vue = new Vue({
             });
         },
         addCatalog:function (){
-            vue.showModel("/strategyCatalogs/save", "添加成功", "save");
+            vue.showModel("/strategies/catalogs/save", "添加成功", "save");
         },
         editTheme:function (id){
-            ajaxGet("article", "/strategyCatalogs/detail", {id:id}, function (data){
+            ajaxGet("article", "/strategies/catalogs/detail", {id:id}, function (data){
                 vue.catalog = data.data
-                vue.showModel("/strategyCatalogs/update", "编辑成功", "edit");
+                vue.showModel("/strategies/catalogs/update", "编辑成功", "edit");
             })
         },
         delete:function (id){
             layer.confirm('确认要删除吗？', function (index) {
-                ajaxPost("article", "/strategyCatalogs/delete/" + id, {}, function (data){
+                ajaxPost("article", "/strategies/catalogs/delete/" + id, {}, function (data){
                     layer.msg('已删除!', {icon: 1, time: 200}, function (){
                         location.reload();
                     });

@@ -21,7 +21,7 @@ var vue = new Vue({
         //概括
         querySurery:function (){
             //List<StrategyCatalog> list
-            ajaxGet("article","/destinations/catalogs",{destId:this.param.destId}, function (data) {
+            ajaxGet("article","/strategies/groups",{destId:this.param.destId}, function (data) {
                 //[{长隆度假区}, {最广州},{广式美味}]
                 vue.catalogs = data.data;
                 $.each(vue.catalogs, function(index, item){

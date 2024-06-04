@@ -1,9 +1,11 @@
-package cn.tripcode.trip.article.service;
+package cn.tripcode.trip.article.service.impl;
 
 import cn.tripcode.trip.article.mapper.DestinationMapper;
 import cn.tripcode.trip.article.domain.Destination;
 import cn.tripcode.trip.article.domain.Region;
 import cn.tripcode.trip.article.qo.DestinationQuery;
+import cn.tripcode.trip.article.service.DestinationService;
+import cn.tripcode.trip.article.service.RegionService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -13,13 +15,17 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.ThreadPoolExecutor;
 
 @Service
 public class DestinationServiceImpl extends ServiceImpl<DestinationMapper, Destination> implements DestinationService {
     private final RegionService regionService;
+    private final ThreadPoolExecutor bussinessThreadPoolExecutor;
 
-    public DestinationServiceImpl(RegionService regionService) {
+    public DestinationServiceImpl(RegionService regionService, ThreadPoolExecutor threadPoolExecutor) {
         this.regionService = regionService;
+        this.bussinessThreadPoolExecutor = threadPoolExecutor;
     }
 
     @Override
@@ -72,11 +78,20 @@ public class DestinationServiceImpl extends ServiceImpl<DestinationMapper, Desti
             }
             destinations=this.getBaseMapper().selectHotListByRid(rid,region.parseRefIds());
         }
+        //创建一个倒计时对象 CountDownLatch, 设置倒计时的值为目的地数量
+        CountDownLatch countDownLatch=new CountDownLatch(destinations.size());
         for(Destination dest:destinations){
-            List<Destination> children=dest.getChildren();
-            if(children!=null&&children.size()>10) {
-                dest.setChildren(children.subList(0, 10));
-            }
+            bussinessThreadPoolExecutor.execute(()-> {
+                List<Destination> children = dest.getChildren();
+                // 2. 倒计时数量 -1
+                countDownLatch.countDown();
+            });
+        }
+        //3. 等待倒计时结束
+        try {
+            countDownLatch.await();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
         return destinations;
     }

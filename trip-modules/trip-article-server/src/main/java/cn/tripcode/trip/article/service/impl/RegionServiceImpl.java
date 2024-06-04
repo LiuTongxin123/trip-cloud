@@ -1,7 +1,8 @@
-package cn.tripcode.trip.article.service;
+package cn.tripcode.trip.article.service.impl;
 
 import cn.tripcode.trip.article.mapper.RegionMapper;
 import cn.tripcode.trip.article.domain.Region;
+import cn.tripcode.trip.article.service.RegionService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;

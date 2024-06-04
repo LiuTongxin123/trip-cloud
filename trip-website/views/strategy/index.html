@@ -171,8 +171,8 @@
         </h3>
         <ol>
             <li v-for="t in chinaCondition">
-                <a href="javascript:;" class="strategySearch"  :data-refid="t.refid" :data-type="t.type"
-                   @click="strategySearch($event, t.type,t.refid, t.name)" >{{t.name}}({{t.count}})</a>
+                <a href="javascript:;" class="strategySearch"  :data-refid="t.refid" :data-type="1"
+                   @click="strategySearch($event,1,t.refid, t.name)" >{{t.name}}({{t.total}})</a>
             </li>
         </ol>
         <span class="sp_toggle">
@@ -186,8 +186,8 @@
         </h3>
         <ol>
             <li v-for="t in abroadCondition">
-                <a href="javascript:;" class="strategySearch" :data-refid="t.refid" :data-type="t.type"
-                   @click="strategySearch($event, t.type,t.refid, t.name)">{{t.name}}({{t.count}})</a>
+                <a href="javascript:;" class="strategySearch" :data-refid="t.refid" :data-type="2"
+                   @click="strategySearch($event, 2,t.refid, t.name)">{{t.name}}({{t.total}})</a>
             </li>
 
         </ol>
@@ -203,8 +203,8 @@
         </h3>
         <ol>
             <li v-for="t in themeCondition">
-                <a href="javascript:;" class="strategySearch" :data-refid="t.refid" :data-type="t.type"
-                   @click="strategySearch($event, t.type,t.refid, t.name)">{{t.name}}({{t.count}})</a>
+                <a href="javascript:;" class="strategySearch" :data-refid="t.refid" :data-type="3"
+                   @click="strategySearch($event,3,t.refid, t.name)">{{t.name}}({{t.total}})</a>
             </li>
         </ol>
         <span class="sp_toggle">
@@ -224,7 +224,7 @@
     </div>
 
     <form  id="searchForm">
-        <input type="hidden" name="currentPage" id="currentPage" value="1">
+        <input type="hidden" name="current" id="currentPage" value="1">
         <input type="hidden" name="orderBy" id="orderBy" value="viewnum">
         <input type="hidden" name="type" id="typeId" value="-1">
         <input type="hidden" name="refid" id="refid" value="-1">
