@@ -1,9 +1,11 @@
 package cn.tripcode.trip.user.service;
 
 import cn.tripcode.trip.user.domain.UserInfo;
+import cn.tripcode.trip.user.dto.UserInfoDTO;
 import cn.tripcode.trip.user.vo.RegisterRequest;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.util.List;
 import java.util.Map;
 
 public interface UserInfoService extends IService<UserInfo> {
@@ -17,4 +19,10 @@ public interface UserInfoService extends IService<UserInfo> {
     void register(RegisterRequest registerRequest);
 
     Map<String, Object> login(String username, String password);
+
+    UserInfoDTO getDtoById(Long id);
+
+    List<Long> getFavorStrategyIdList(Long userId);
+
+    Boolean favorStrategy(Long sid);
 }

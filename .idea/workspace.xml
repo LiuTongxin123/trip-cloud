@@ -5,38 +5,144 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9af2f14b-39e8-4233-a9ea-84814f782b1e" name="更改" comment="版本1.2">
-      <change afterPath="$PROJECT_DIR$/trip-common/trip-common-auth/src/main/java/cn/tripcode/trip/auth/utils/SpringContextUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trip-modules-api/trip-article-api/src/main/java/cn/tripcode/trip/article/qo/StrategyQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trip-modules-api/trip-article-api/src/main/java/cn/tripcode/trip/article/vo/StrategyCondition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/mapper/StrategyContentMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/utils/OssUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/resources/mapper/StrategyMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/src/test/java/TimerTaskTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-common/trip-common-auth/src/main/java/cn/tripcode/trip/auth/utils/AuthenticationUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-common/trip-common-core/src/main/java/cn/tripcode/trip/core/utils/DateUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-common/trip-common-core/src/main/java/cn/tripcode/trip/core/utils/RsaUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules-api/trip-article-api/src/main/java/cn/tripcode/trip/article/domain/Banner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules-api/trip-article-api/src/main/java/cn/tripcode/trip/article/domain/StrategyRank.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules-api/trip-article-api/src/main/java/cn/tripcode/trip/article/domain/Travel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules-api/trip-article-api/src/main/java/cn/tripcode/trip/article/domain/TravelContent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules-api/trip-article-api/src/main/java/cn/tripcode/trip/article/dto/DestinationDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules-api/trip-article-api/src/main/java/cn/tripcode/trip/article/dto/StrategyDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules-api/trip-article-api/src/main/java/cn/tripcode/trip/article/dto/TravelDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules-api/trip-article-api/src/main/java/cn/tripcode/trip/article/qo/TravelQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules-api/trip-article-api/src/main/java/cn/tripcode/trip/article/redis/key/StrategyRedisKeyPrefix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules-api/trip-article-api/src/main/java/cn/tripcode/trip/article/vo/TravelRange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules-api/trip-comment-api/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules-api/trip-comment-api/src/main/java/comment/domain/StrategyComment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules-api/trip-comment-api/src/main/java/comment/domain/TravelComment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules-api/trip-comment-api/src/main/java/comment/qo/CommentQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules-api/trip-search-api/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules-api/trip-search-api/src/main/java/cn/tripcode/trip/search/domain/DestinationEs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules-api/trip-search-api/src/main/java/cn/tripcode/trip/search/domain/StrategyEs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules-api/trip-search-api/src/main/java/cn/tripcode/trip/search/domain/TravelEs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules-api/trip-search-api/src/main/java/cn/tripcode/trip/search/domain/UserInfoEs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules-api/trip-search-api/src/main/java/cn/tripcode/trip/search/qo/SearchQueryObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules-api/trip-users-api/src/main/java/cn/tripcode/trip/user/dto/UserInfoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/controller/BannerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/controller/TravelController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/feign/UserInfoFeignService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/listener/RedisStatDataInitListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/mapper/BannerMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/mapper/StrategyRankMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/mapper/TravelContentMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/mapper/TravelMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/service/BannerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/service/StrategyRankService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/service/TravelService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/service/impl/BannerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/service/impl/StrategyRankServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/service/impl/TravelServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-comment-server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-comment-server/src/main/java/cn/tripcode/trip/comment/TripCommentApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-comment-server/src/main/java/cn/tripcode/trip/comment/controller/StrategyCommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-comment-server/src/main/java/cn/tripcode/trip/comment/controller/TravelCommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-comment-server/src/main/java/cn/tripcode/trip/comment/redis/key/CommentRedisKeyPrefix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-comment-server/src/main/java/cn/tripcode/trip/comment/repository/StrategyCommentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-comment-server/src/main/java/cn/tripcode/trip/comment/repository/TravelCommentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-comment-server/src/main/java/cn/tripcode/trip/comment/service/StrategyCommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-comment-server/src/main/java/cn/tripcode/trip/comment/service/TravelCommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-comment-server/src/main/java/cn/tripcode/trip/comment/service/impl/StrategyCommentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-comment-server/src/main/java/cn/tripcode/trip/comment/service/impl/TravelCommentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-comment-server/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-data-server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-data-server/src/main/java/cn/tripcode/trip/data/TripDataApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-data-server/src/main/java/cn/tripcode/trip/data/job/StrategyRankStatisJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-data-server/src/main/java/cn/tripcode/trip/data/job/StrategyStatDataPersistenceJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-data-server/src/main/java/cn/tripcode/trip/data/mapper/StrategyMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-data-server/src/main/java/cn/tripcode/trip/data/mapper/StrategyRankMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-data-server/src/main/java/cn/tripcode/trip/data/service/StrategyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-data-server/src/main/java/cn/tripcode/trip/data/service/impl/StrategyServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-data-server/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-data-server/src/main/resources/mapper/StrategyMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-data-server/src/main/resources/mapper/StrategyRankMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-search-server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-search-server/src/main/java/cn/tripcode/trip/search/TripSearchApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-search-server/src/main/java/cn/tripcode/trip/search/controller/ElasticsearchDataInitController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-search-server/src/main/java/cn/tripcode/trip/search/controller/SearchController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-search-server/src/main/java/cn/tripcode/trip/search/feign/ArticleFeignService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-search-server/src/main/java/cn/tripcode/trip/search/feign/UserInfoFeignService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-search-server/src/main/java/cn/tripcode/trip/search/parser/ElasticsearchTypeParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-search-server/src/main/java/cn/tripcode/trip/search/service/ElasticsearchService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-search-server/src/main/java/cn/tripcode/trip/search/service/impl/ElasticsearchServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-search-server/src/main/java/cn/tripcode/trip/search/utils/BeanUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-search-server/src/main/java/cn/tripcode/trip/search/vo/SearchResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-modules/trip-search-server/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/59607521-4680-40c6-917b-aefc1a637e4e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/59607521-4680-40c6-917b-aefc1a637e4e.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trip-common/trip-common-auth/src/main/java/cn/tripcode/trip/auth/config/Wolf2wJwtAutoConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-common/trip-common-auth/src/main/java/cn/tripcode/trip/auth/config/Wolf2wJwtAutoConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trip-common/trip-common-auth/target/classes/cn/tripcode/trip/auth/config/Wolf2wJwtAutoConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/trip-common/trip-common-auth/target/classes/cn/tripcode/trip/auth/config/Wolf2wJwtAutoConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trip-common/trip-common-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/trip-common/trip-common-core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trip-mgrsite/js/vue/strategy/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/trip-mgrsite/js/vue/strategy/add.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trip-mgrsite/js/vue/strategy/edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/trip-mgrsite/js/vue/strategy/edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trip-modules/trip-article-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-common/trip-common-auth/src/main/java/cn/tripcode/trip/auth/interceptor/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-common/trip-common-auth/src/main/java/cn/tripcode/trip/auth/interceptor/LoginInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-common/trip-common-auth/target/classes/cn/tripcode/trip/auth/interceptor/LoginInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/trip-common/trip-common-auth/target/classes/cn/tripcode/trip/auth/interceptor/LoginInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-common/trip-common-core/src/main/java/cn/tripcode/trip/core/qo/QueryObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-common/trip-common-core/src/main/java/cn/tripcode/trip/core/qo/QueryObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-common/trip-common-core/src/main/java/cn/tripcode/trip/core/utils/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-common/trip-common-core/src/main/java/cn/tripcode/trip/core/utils/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-common/trip-common-core/target/classes/cn/tripcode/trip/core/qo/QueryObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/trip-common/trip-common-core/target/classes/cn/tripcode/trip/core/qo/QueryObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-common/trip-common-core/target/classes/cn/tripcode/trip/core/utils/R.class" beforeDir="false" afterPath="$PROJECT_DIR$/trip-common/trip-common-core/target/classes/cn/tripcode/trip/core/utils/R.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-common/trip-common-redis/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/trip-common/trip-common-redis/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-modules-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-modules-api/trip-article-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules-api/trip-article-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-modules-api/trip-article-api/target/classes/cn/tripcode/trip/article/qo/StrategyQuery.class" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules-api/trip-article-api/target/classes/cn/tripcode/trip/article/qo/StrategyQuery.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-modules-api/trip-users-api/src/main/java/cn/tripcode/trip/user/domain/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules-api/trip-users-api/src/main/java/cn/tripcode/trip/user/domain/UserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-modules-api/trip-users-api/target/classes/cn/tripcode/trip/user/domain/UserInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules-api/trip-users-api/target/classes/cn/tripcode/trip/user/domain/UserInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-modules/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/TripArticleApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/TripArticleApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/controller/DestinationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/controller/DestinationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/controller/StrategyCatalogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/controller/StrategyCatalogController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/controller/StrategyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/controller/StrategyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/controller/StrategyThemeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/controller/StrategyThemeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/mapper/StrategyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/mapper/StrategyMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/mapper/DestinationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/mapper/DestinationMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/service/StrategyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/service/StrategyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/service/impl/DestinationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/service/impl/DestinationServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/service/impl/StrategyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/src/main/java/cn/tripcode/trip/article/service/impl/StrategyServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-modules/trip-article-server/target/classes/cn/tripcode/trip/article/TripArticleApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/target/classes/cn/tripcode/trip/article/TripArticleApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-modules/trip-article-server/target/classes/cn/tripcode/trip/article/controller/DestinationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/target/classes/cn/tripcode/trip/article/controller/DestinationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-modules/trip-article-server/target/classes/cn/tripcode/trip/article/controller/StrategyCatalogController.class" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/target/classes/cn/tripcode/trip/article/controller/StrategyCatalogController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trip-modules/trip-article-server/target/classes/cn/tripcode/trip/article/controller/StrategyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/target/classes/cn/tripcode/trip/article/controller/StrategyController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trip-modules/trip-article-server/target/classes/cn/tripcode/trip/article/controller/StrategyThemeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/target/classes/cn/tripcode/trip/article/controller/StrategyThemeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trip-modules/trip-article-server/target/classes/cn/tripcode/trip/article/mapper/StrategyMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/target/classes/cn/tripcode/trip/article/mapper/StrategyMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-modules/trip-article-server/target/classes/cn/tripcode/trip/article/mapper/DestinationMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/target/classes/cn/tripcode/trip/article/mapper/DestinationMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-modules/trip-article-server/target/classes/cn/tripcode/trip/article/mapper/StrategyContentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/target/classes/cn/tripcode/trip/article/mapper/StrategyContentMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trip-modules/trip-article-server/target/classes/cn/tripcode/trip/article/service/StrategyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/target/classes/cn/tripcode/trip/article/service/StrategyService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trip-modules/trip-article-server/target/classes/cn/tripcode/trip/article/service/impl/DestinationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/target/classes/cn/tripcode/trip/article/service/impl/DestinationServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trip-modules/trip-article-server/target/classes/cn/tripcode/trip/article/service/impl/StrategyServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-article-server/target/classes/cn/tripcode/trip/article/service/impl/StrategyServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-modules/trip-users-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-users-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-modules/trip-users-server/src/main/java/cn/tripcode/trip/user/TripUserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-users-server/src/main/java/cn/tripcode/trip/user/TripUserApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-modules/trip-users-server/src/main/java/cn/tripcode/trip/user/controller/UserInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-users-server/src/main/java/cn/tripcode/trip/user/controller/UserInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-modules/trip-users-server/src/main/java/cn/tripcode/trip/user/mapper/UserInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-users-server/src/main/java/cn/tripcode/trip/user/mapper/UserInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-modules/trip-users-server/src/main/java/cn/tripcode/trip/user/service/UserInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-users-server/src/main/java/cn/tripcode/trip/user/service/UserInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-modules/trip-users-server/src/main/java/cn/tripcode/trip/user/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-users-server/src/main/java/cn/tripcode/trip/user/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-modules/trip-users-server/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-users-server/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-modules/trip-users-server/src/main/resources/cn.tripcode.trip.user.mapper/UserInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-users-server/src/main/resources/mapper/UserInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-modules/trip-users-server/target/classes/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-users-server/target/classes/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-modules/trip-users-server/target/classes/cn.tripcode.trip.user.mapper/UserInfoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-modules/trip-users-server/target/classes/cn/tripcode/trip/user/TripUserApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-users-server/target/classes/cn/tripcode/trip/user/TripUserApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-modules/trip-users-server/target/classes/cn/tripcode/trip/user/controller/UserInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-users-server/target/classes/cn/tripcode/trip/user/controller/UserInfoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-modules/trip-users-server/target/classes/cn/tripcode/trip/user/mapper/UserInfoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-users-server/target/classes/cn/tripcode/trip/user/mapper/UserInfoMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-modules/trip-users-server/target/classes/cn/tripcode/trip/user/service/UserInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-users-server/target/classes/cn/tripcode/trip/user/service/UserInfoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-modules/trip-users-server/target/classes/cn/tripcode/trip/user/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/trip-modules/trip-users-server/target/classes/cn/tripcode/trip/user/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-website/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/trip-website/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-website/js/vue/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/trip-website/js/vue/common.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trip-website/js/vue/system/destination/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/trip-website/js/vue/system/destination/detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trip-website/js/vue/system/destination/survey.js" beforeDir="false" afterPath="$PROJECT_DIR$/trip-website/js/vue/system/destination/survey.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-website/js/vue/system/personal/homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/trip-website/js/vue/system/personal/homepage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-website/js/vue/system/search/searchStrategy.js" beforeDir="false" afterPath="$PROJECT_DIR$/trip-website/js/vue/system/search/searchStrategy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-website/js/vue/system/strategy/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/trip-website/js/vue/system/strategy/detail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trip-website/js/vue/system/strategy/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/trip-website/js/vue/system/strategy/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trip-website/js/vue/system/strategy/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/trip-website/js/vue/system/strategy/list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trip-website/views/strategy/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/trip-website/views/strategy/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-website/js/vue/system/travel/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/trip-website/js/vue/system/travel/detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-website/views/destination/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/trip-website/views/destination/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-website/views/search/searchAll.html" beforeDir="false" afterPath="$PROJECT_DIR$/trip-website/views/search/searchAll.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-website/views/search/searchDest.html" beforeDir="false" afterPath="$PROJECT_DIR$/trip-website/views/search/searchDest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-website/views/strategy/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/trip-website/views/strategy/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-website/views/travel/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/trip-website/views/travel/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-website/views/travel/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/trip-website/views/travel/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +162,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$PROJECT_DIR$/../../../../Program Files/Java/jdk1.8/src.zip!/java/lang/Iterable.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-extension/3.4.0/mybatis-plus-extension-3.4.0.jar!/com/baomidou/mybatisplus/extension/service/IService.class" root0="SKIP_INSPECTION" />
   </component>
   <component name="LogFilters">
@@ -88,36 +195,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/liuto/Desktop/trip_cloud/trip-modules/trip-article-server/src/main/resources/mapper&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.31954023&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;6d0ab523775e052765f31c2d44870c48&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "C:/Users/liuto/Desktop/trip_cloud/trip-website/views",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "问题",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.31954023",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "spring.configuration.checksum": "ee02f9227d2048772062c8f37ae6a728",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -129,11 +236,11 @@
       <recent name="cn.tripcode.trip.user.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\liuto\Desktop\trip_cloud\trip-modules\trip-article-server\src\main\resources\mapper" />
-      <recent name="C:\Users\liuto\Desktop\trip_cloud\trip-modules-api\trip-article-api\src\main\java\cn\tripcode\trip\article\domain" />
-      <recent name="C:\Users\liuto\Desktop\trip_cloud\trip-modules\trip-article-server\src\main\resources\cn.tripcode.trip.article.mapper" />
-      <recent name="C:\Users\liuto\Desktop\trip_cloud\trip-modules\trip-users-server\src\main\resources\cn.tripcode.trip.user.mapper" />
-      <recent name="C:\Users\liuto\Desktop\trip_cloud\trip-modules\trip-article-server\src\main\java\cn\tripcode\trip\article" />
+      <recent name="C:\Users\liuto\Desktop\trip_cloud\trip-website\views" />
+      <recent name="C:\Users\liuto\Desktop\trip_cloud\trip-modules-api\trip-article-api\src\main\java\cn\tripcode\trip\article" />
+      <recent name="C:\Users\liuto\Desktop\trip_cloud\trip-modules" />
+      <recent name="C:\Users\liuto\Desktop\trip_cloud\trip-modules-api" />
+      <recent name="C:\Users\liuto\Desktop\trip_cloud\trip-modules\trip-data-server\src\main\java\cn\tripcode\trip\data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\liuto\Desktop\trip_cloud\trip-modules\trip-article-server\target\classes\cn\tripcode\trip\article" />
@@ -142,11 +249,11 @@
       <recent name="C:\Users\liuto\Desktop\trip_cloud\trip-modules\trip-article-server\src\main\java\cn\tripcode\trip\article\mapper" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="cn.tripcode.trip.article.mapper" />
-      <recent name="cn.tripcode.trip.auth.utils" />
-      <recent name="cn.tripcode.trip.article.utils" />
       <recent name="cn.tripcode.trip.article.controller" />
+      <recent name="cn.tripcode.trip.article.mapper" />
+      <recent name="cn.tripcode.trip.article.service" />
       <recent name="cn.tripcode.trip.article.service.impl" />
+      <recent name="cn.tripcode.trip.data.job" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -156,54 +263,65 @@
       </set>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="CompletableFutureTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="trip-users-server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.tripcode.trip.article.threads.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="cn.tripcode.trip.article.threads" />
-      <option name="MAIN_CLASS_NAME" value="cn.tripcode.trip.article.threads.CompletableFutureTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CompletableFutureTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="trip-users-server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.tripcode.trip.article.threads.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="cn.tripcode.trip.article.threads" />
-      <option name="MAIN_CLASS_NAME" value="cn.tripcode.trip.article.threads.CompletableFutureTest" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TimerTaskTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="trip-article-server" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TimerTaskTest" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.TripSearchApplication">
     <configuration name="TripArticleApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="trip-article-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="cn.tripcode.trip.article.TripArticleApplication" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="cn.tripcode.trip.article.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TripCommentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="trip-comment-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.tripcode.trip.comment.TripCommentApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.tripcode.trip.comment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TripGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="trip-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.tripcode.trip.gateway.TripGatewayApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.tripcode.trip.gateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TripSearchApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="trip-search-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.tripcode.trip.search.TripSearchApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.tripcode.trip.search.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TripUserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="trip-users-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.tripcode.trip.user.TripUserApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.tripcode.trip.user.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -382,19 +500,21 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.TimerTaskTest.test" />
-      <item itemvalue="JUnit.CompletableFutureTest" />
-      <item itemvalue="JUnit.CompletableFutureTest.test" />
+      <item itemvalue="Spring Boot.TripSearchApplication" />
+      <item itemvalue="Spring Boot.TripCommentApplication" />
+      <item itemvalue="Spring Boot.TripUserApplication" />
       <item itemvalue="Spring Boot.TripArticleApplication" />
+      <item itemvalue="Spring Boot.TripGatewayApplication" />
       <item itemvalue="Tomcat 服务器.trip-mgrsite" />
       <item itemvalue="Tomcat 服务器.trip-website" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TimerTaskTest.test" />
+        <item itemvalue="Spring Boot.TripUserApplication" />
         <item itemvalue="Spring Boot.TripArticleApplication" />
-        <item itemvalue="JUnit.CompletableFutureTest.test" />
-        <item itemvalue="JUnit.CompletableFutureTest" />
+        <item itemvalue="Spring Boot.TripSearchApplication" />
+        <item itemvalue="Spring Boot.TripGatewayApplication" />
+        <item itemvalue="Spring Boot.TripCommentApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -432,7 +552,19 @@
       <workItem from="1718604019475" duration="6096000" />
       <workItem from="1718616176647" duration="26000" />
       <workItem from="1718704423213" duration="273000" />
-      <workItem from="1719035372697" duration="1886000" />
+      <workItem from="1719035372697" duration="12946000" />
+      <workItem from="1719234840794" duration="192000" />
+      <workItem from="1719295012908" duration="10702000" />
+      <workItem from="1719379587484" duration="10188000" />
+      <workItem from="1725867306872" duration="2558000" />
+      <workItem from="1726052560640" duration="5712000" />
+      <workItem from="1726108117818" duration="14830000" />
+      <workItem from="1726204870202" duration="17292000" />
+      <workItem from="1726309968037" duration="10979000" />
+      <workItem from="1726398077726" duration="16281000" />
+      <workItem from="1726466329746" duration="1978000" />
+      <workItem from="1726550305568" duration="26767000" />
+      <workItem from="1726639179288" duration="3761000" />
     </task>
     <task id="LOCAL-00001" summary="2">
       <created>1716366186957</created>
@@ -469,7 +601,14 @@
       <option name="project" value="LOCAL" />
       <updated>1717485051931</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="版本1.2">
+      <created>1719038182614</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1719038182614</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -3,6 +3,7 @@ package cn.tripcode.trip.auth.interceptor;
 
 import cn.tripcode.trip.auth.anno.RequireLogin;
 import cn.tripcode.trip.auth.config.JwtProperties;
+import cn.tripcode.trip.auth.utils.AuthenticationUtils;
 import cn.tripcode.trip.core.exception.BusinessException;
 import cn.tripcode.trip.redis.utils.RedisCache;
 import cn.tripcode.trip.user.redis.key.UserRedisKeyPrefix;
@@ -13,6 +14,7 @@ import io.jsonwebtoken.Jwts;
 
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -67,5 +69,11 @@ public class LoginInterceptor implements HandlerInterceptor {
             throw new BusinessException(401,"用户未认证");
         }
         return true;
+    }
+    @Override
+    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndVie)throws Exception {
+        //请求执行完成以后准备响应之前执行
+        //线程即将完成本次请求，先将当前线程空间内存的数据清除掉
+        AuthenticationUtils.removeUser();
     }
 }

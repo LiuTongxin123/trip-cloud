@@ -177,7 +177,7 @@
                                             </span>
                                             <span class="tn-user">
                                                 <a :href="'/views/personal/homepage.html?userId='+t.author.id" target="_blank" rel="nofollow">
-                                                    <img :src="t.author.headImgUrl">
+                                                    <img :src="t.author && t.author.headImgUrl">
                                                     {{t.author.nickname}}
                                                 </a>
                                             </span>

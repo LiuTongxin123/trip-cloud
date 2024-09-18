@@ -35,7 +35,7 @@
                 <div class="sub-tit">
                     <i class="i-zan"></i>
                     51人体验过
-                    <span class="time" style="margin-left: 20px;"><em>阅读 {{hash.viewnum}}</em></span>
+                    <span class="time" style="margin-left: 20px;"><em>阅读 {{strategy.viewnum}}</em></span>
                     <span class="time">旅游攻略<em>{{strategy.createTime | dateFormat}}</em></span>
                 </div>
 
@@ -125,21 +125,20 @@
             <div class="side_inner _j_sticky_block">
                 <div class="_j_other_column">
                     <div class="bar-sar clearfix">
-                        <a href="javascript:;" class="_j_goto_comment" @click="contentFocus" title="评论"><i class="i01"></i><em class="replay_num">{{hash.replynum}}</em></a>
+                        <a href="javascript:;" class="_j_goto_comment" @click="contentFocus" title="评论"><i class="i01"></i><em class="replay_num">{{strategy.replynum}}</em></a>
                         <div class="bs_collect">
-                            <a href="javascript:void(0);" title="收藏" class="bs_btn btn-collect" @click="favor"><i
-                                    class="collect_icon i02 "
-                                    ></i>
-                                <em class="favorite_num ">{{hash.favornum}}</em>
+                            <a href="javascript:void(0);" title="收藏" class="bs_btn btn-collect" @click="favor">
+                                <i :class="['collect_icon', 'i02', strategy.favorite ? 'on-i02' : '']"></i>
+                                <em class="favorite_num ">{{strategy.favornum}}</em>
                             </a>
                         </div>
                         <div class="bs_share">
                             <a href="javascript:;" title="分享" class="btn-share bs_btn"><i
-                                    class="i03"></i><em>{{hash.sharenum}}</em></a>
+                                    class="i03"></i><em>{{strategy.sharenum}}</em></a>
                         </div>
 
                         <a href="javascript:;" class="_j_support_btn"  title="顶" @click="strategyThumbup"><i class="i05 "></i><em
-                                class="support_num">{{hash.thumbsupnum}}</em></a>
+                                class="support_num">{{strategy.thumbsupnum}}</em></a>
                     </div>
                     <div class="bs_pop clearfix" style="display: none;">
                         <a title="分享到新浪微博" rel="nofollow" role="button" class="sina" data-japp="sns_share"

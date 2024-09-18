@@ -16,7 +16,7 @@ public class StrategyCatalogController {
     public StrategyCatalogController(StrategyCatalogService strategyCatalogService) {
         this.strategyCatalogService = strategyCatalogService;
     }
-    @GetMapping("query")
+    @GetMapping("/query")
     public R<Page<StrategyCatalog>> pageList(Page<StrategyCatalog> page) {
         return R.ok(strategyCatalogService.page(page));
     }

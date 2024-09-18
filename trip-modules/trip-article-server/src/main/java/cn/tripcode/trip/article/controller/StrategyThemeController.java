@@ -17,7 +17,7 @@ public class StrategyThemeController {
     public StrategyThemeController(StrategyThemeService strategyThemeService) {
         this.strategyThemeService = strategyThemeService;
     }
-    @GetMapping("query")
+    @GetMapping("/query")
     public R<Page<StrategyTheme>> pageList(Page<StrategyTheme> page) {
         return R.ok(strategyThemeService.page(page));
     }

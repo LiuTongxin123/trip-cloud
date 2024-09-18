@@ -1,9 +1,11 @@
 package cn.tripcode.trip.user.service.impl;
 
 import cn.tripcode.trip.auth.config.JwtProperties;
+import cn.tripcode.trip.auth.utils.AuthenticationUtils;
 import cn.tripcode.trip.core.exception.BusinessException;
 import cn.tripcode.trip.core.utils.R;
 import cn.tripcode.trip.redis.utils.RedisCache;
+import cn.tripcode.trip.user.dto.UserInfoDTO;
 import cn.tripcode.trip.user.mapper.UserInfoMapper;
 import cn.tripcode.trip.user.redis.key.UserRedisKeyPrefix;
 import cn.tripcode.trip.user.service.UserInfoService;
@@ -19,6 +21,7 @@ import org.springframework.stereotype.Service;
 import cn.tripcode.trip.core.utils.Md5Utils;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
@@ -78,11 +81,13 @@ public class UserServiceImpl extends ServiceImpl<UserInfoMapper,UserInfo> implem
         }
         LoginUser loginUser=new LoginUser();
         BeanUtils.copyProperties(userInfo,loginUser);
-
-        long now=System.currentTimeMillis();
+        // 当前时间
+        long now = System.currentTimeMillis();
         loginUser.setLoginTime(now);
-        long expireTime=now + jwtProperties.getExpireTime()*LoginUser.MINUTES_MILLISECONDS;
-        loginUser.setExpireTime(expireTime);
+        // 过期时间
+        long expireTime = jwtProperties.getExpireTime() * LoginUser.MINUTES_MILLISECONDS;
+        long fullExpireTime = now + expireTime;
+        loginUser.setExpireTime(fullExpireTime);
         //redis唯一标识
         String uuid=UUID.randomUUID().toString().replace("-","");
         UserRedisKeyPrefix loginInfoString=UserRedisKeyPrefix.USER_LOGIN_INFO_STRING;
@@ -100,6 +105,45 @@ public class UserServiceImpl extends ServiceImpl<UserInfoMapper,UserInfo> implem
         payload.put("token",jwtToken);
         payload.put("user",loginUser);
         return payload;
+    }
+
+    @Override
+    public UserInfoDTO getDtoById(Long id) {
+        UserInfo userInfo=super.getById(id);
+        if(userInfo!=null){
+            UserInfoDTO userInfoDTO=new UserInfoDTO();
+            BeanUtils.copyProperties(userInfo,userInfoDTO);
+            return userInfoDTO;
+        }
+        return null;
+    }
+
+    @Override
+    public List<Long> getFavorStrategyIdList(Long userId) {
+
+        return getBaseMapper().selectFavorStrategyIdList(userId);
+    }
+
+    @Override
+    public Boolean favorStrategy(Long sid) {
+        // 1. 获取当前登录的用户
+        LoginUser user = AuthenticationUtils.getUser();
+        // 2. 获取当前用户收藏的文章列表
+        List<Long> list = this.getFavorStrategyIdList(user.getId());
+        // 3. 判断当前用户是否已经收藏过该文章
+        if (list.contains(sid)) {
+            // 4. 收藏过 => 取消收藏, 数量-1
+            getBaseMapper().deleteFavorStrategy(user.getId(), sid);
+            redisCache.hashIncrement(UserRedisKeyPrefix.STRATEGIES_STAT_DATA_MAP, "favornum",
+                    -1, sid + "");
+            return false;
+        }
+
+        // 5. 没收藏 => 收藏, 数量+1
+        getBaseMapper().insertFavorStrategy(user.getId(), sid);
+        redisCache.hashIncrement(UserRedisKeyPrefix.STRATEGIES_STAT_DATA_MAP, "favornum",
+                1, sid + "");
+        return true;
     }
 
     private UserInfo buildUserInfo(RegisterRequest registerRequest) {

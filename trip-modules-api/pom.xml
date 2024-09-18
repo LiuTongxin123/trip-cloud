@@ -16,6 +16,7 @@
     <modules>
         <module>trip-users-api</module>
         <module>trip-article-api</module>
+        <module>trip-comment-api</module>
     </modules>
     <dependencies>
         <dependency>

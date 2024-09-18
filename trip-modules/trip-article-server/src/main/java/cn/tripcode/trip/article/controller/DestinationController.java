@@ -1,9 +1,11 @@
 package cn.tripcode.trip.article.controller;
 
 import cn.tripcode.trip.article.service.DestinationService;
+import cn.tripcode.trip.core.qo.QueryObject;
 import cn.tripcode.trip.core.utils.R;
 import cn.tripcode.trip.article.domain.Destination;
 import cn.tripcode.trip.article.qo.DestinationQuery;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,6 +22,15 @@ public class DestinationController {
     @GetMapping
     public R<Page<Destination>> pageList(DestinationQuery query) {
         return R.ok(destinationService.pageList(query));
+    }
+    @PostMapping("/search")
+    public R<List<Destination>> searchList(@RequestBody QueryObject qo) {
+        return R.ok(destinationService.list(new QueryWrapper<Destination>().last("limit " + qo.getOffset() + ", " + qo.getSize())));
+    }
+
+    @GetMapping("/getByName")
+    public R<Destination> getDestByName(@RequestParam String name) {
+        return R.ok(destinationService.getOne(new QueryWrapper<Destination>().eq("name", name)));
     }
     @GetMapping("/toasts")
     public R<List<Destination>> toasts(Long destId) {

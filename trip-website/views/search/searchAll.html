@@ -131,7 +131,7 @@
                                 <a href="javascript:;" target="_blank"
                                     class="_j_search_link" v-html="t.title"></a>
                                 <span class="seg-info">{{t.createTime|dateFormat}}</span>
-                                <span class="seg-info">{{t.author.nickname}}</span>
+                                <span class="seg-info">{{t.author && t.author.nickname}}</span>
                                 <span class="seg-info">浏览({{t.viewnum}})</span>
                                 <span class="seg-info">回复({{t.replynum}})</span>
                             </p>

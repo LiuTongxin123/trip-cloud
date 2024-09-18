@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
-
+@Mapper
 public interface DestinationMapper extends BaseMapper <Destination>{
     List<Destination> selectHotListByRid(@Param("rid") Long rid,@Param("ids") List<Long> ids);
 }

@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: search-service
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848 #nacos中心地址
+      config:
+        file-extension: yaml # 配置文件格式
+        namespace: 4415a716-92be-42ff-983b-0c88daaebe48
+        shared-configs:
+          - data-id: redis-dev.yaml
+  # 配置文件的环境
+  profiles:
+    # 使用哪一种环境
+    active: dev # 环境标识

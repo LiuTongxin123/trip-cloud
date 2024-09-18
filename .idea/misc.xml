@@ -6,6 +6,8 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/trip-modules/trip-users-server/pom.xml" />
+        <option value="$PROJECT_DIR$/trip-modules-api/trip-search-api/pom.xml" />
+        <option value="$PROJECT_DIR$/trip-modules/trip-search-server/pom.xml" />
       </list>
     </option>
   </component>

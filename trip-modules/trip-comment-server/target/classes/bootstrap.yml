@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: comment-service
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      config:
+        namespace: 4415a716-92be-42ff-983b-0c88daaebe48
+        file-extension: yaml
+        shared-configs:
+          - dataId: redis-dev.yaml
+
+          - dataId: jwt-dev.yaml
+
+  profiles:
+    active: dev
+logging:
+  level:
+    org.springframework.data.mongodb.core: debug

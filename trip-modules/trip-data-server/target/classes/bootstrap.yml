@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: data-service
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      config:
+        namespace: 4415a716-92be-42ff-983b-0c88daaebe48
+        file-extension: yaml
+        shared-configs:
+          - dataId: redis-dev.yaml
+  profiles:
+    active: dev
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.xml
+Logging:
+  level:
+    cn.tripcode.trip.data.mapper: debug

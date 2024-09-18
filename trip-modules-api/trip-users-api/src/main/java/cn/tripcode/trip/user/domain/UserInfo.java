@@ -1,5 +1,6 @@
 package cn.tripcode.trip.user.domain;
 
+import cn.tripcode.trip.user.dto.UserInfoDTO;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -34,4 +35,18 @@ public class UserInfo implements Serializable {
     private String headImgUrl; //头像
     private String info;  //个性签名
     private Integer state = STATE_NORMAL; //状态
+
+    public UserInfoDTO toDto(){
+        UserInfoDTO dto = new UserInfoDTO();
+        dto.setId(this.id);
+        dto.setNickname(this.nickname);
+        dto.setPhone(this.phone);
+        dto.setEmail(this.email);
+        dto.setGender(this.gender);
+        dto.setLevel(this.level);
+        dto.setCity(this.city);
+        dto.setHeadImgUrl(this.headImgUrl);
+        dto.setInfo(this.info);
+        return dto;
+    }
 }

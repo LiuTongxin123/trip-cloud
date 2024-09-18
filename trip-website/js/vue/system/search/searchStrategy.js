@@ -17,8 +17,6 @@ var vue = new Vue({
         querySearch:function (){
             var params = getParams();
             ajaxGet("search","/q", params, function (data) {
-                console.log(data.data);
-
                 var map = data.data;
                 vue.page = map.page;
                 vue.qo = map.qo;

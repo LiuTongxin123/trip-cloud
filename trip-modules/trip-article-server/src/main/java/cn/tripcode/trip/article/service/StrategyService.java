@@ -11,6 +11,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;
+import java.util.Map;
 
 public interface StrategyService extends IService<Strategy> {
     List<StrategyCatalog> findGroupsByDestId(Long destId);
@@ -24,4 +25,10 @@ public interface StrategyService extends IService<Strategy> {
     List<StrategyCondition> findDestCondition(int abroad);
 
     List<StrategyCondition> findthemeCondition();
+
+    void ViewnumIncr(Long id);
+
+    boolean thumbnumIncr(Long sid);
+
+    Map<String, Object> getStatData(Long id);
 }

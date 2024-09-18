@@ -1,5 +1,6 @@
 package cn.tripcode.trip.core.utils;
 
+import cn.tripcode.trip.core.exception.BusinessException;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -65,6 +66,12 @@ public class R<T> {
 
     public static <T> R<T> noPermission() {
         return new R<>(403, "非法访问", null);
+    }
+    public T checkAndGet(){
+        if(code!=CODE_SUCCESS){
+            throw new BusinessException(code,msg);
+        }
+        return data;
     }
 
 

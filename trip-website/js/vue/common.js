@@ -17,12 +17,12 @@ var serverUrlMap = {
     data : "http://localhost:8083",
     comment : "http://localhost:8084",
     search : "http://localhost:8085",
-    gateway : "http://localhost:9999"
+    gateway : "http://localhost:9000"
 
 }
 function getServiceUrl(service){
     //return serverUrlMap[service]
-    return serverUrlMap["gateway"]+"/" + service;
+    return "http://localhost:9999/" + service;
 }
 
 //异步请求
@@ -32,7 +32,7 @@ function ajaxRequest(server, url,type, param, success, fail){
     //通过js操作将加密之后的签名手动添加到参数中去
 
      //{a:1, b:2,c:3, d:4}
-    //param.sign = getSignString(param);  //使用逻辑处理
+    param.sign = getSignString(param);  //使用逻辑处理
 
     //{a:1, b:2,c:3, d:4, sign:xxx}
 
@@ -137,6 +137,9 @@ function popup(msg) {
 
 //格式转换
 function dateFormat(date, pattern){
+    if (!date) {
+        return date;
+    }
     if(!pattern){
         pattern = "YYYY-MM-DD"
     }
@@ -247,6 +250,7 @@ function searchByType(type, keyword) {
 
     window.location.href =  "/views/search/"+html+"?type=" + type +"&keyword=" + keyword;
 }
+
 
 function getSignString(param) {
     var sdic=Object.keys(param).sort();
